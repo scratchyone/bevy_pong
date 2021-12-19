@@ -1,7 +1,7 @@
 use bevy::ecs::schedule::ShouldRun;
 use bevy::prelude::*;
 
-pub struct GameStarted(bool);
+pub struct GameStarted(pub bool);
 pub struct PreGameOnly;
 
 pub struct PrestartPlugin;

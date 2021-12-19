@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Pong</title>
+  </head>
+  <body>
+    <script type="module">
+      import init from './breakout.js';
+      init('./breakout_bg.wasm').then(function (wasm) {
+        console.log(wasm);
+        wasm.main();
+      });
+    </script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        overflow: hidden;
+        background-color: #000;
+        outline: none;
+      }
+      canvas {
+        touch-action: none;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </body>
+</html>
